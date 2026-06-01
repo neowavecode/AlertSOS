@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support & FAQ - TapSOS</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-card { text-align: center; margin-bottom: 3rem; }
+    .contact-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 1rem 2rem; background: var(--primary-color); color: white;
+      border-radius: 12px; font-size: 1.1rem; font-weight: 600;
+      text-decoration: none; margin-top: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255,59,48,0.4); }
+
+    .faq-section { text-align: left; width: 100%; }
+    .faq-section h2 { text-align: center; margin-bottom: 1.5rem; font-size: 1.6rem; }
+
+    details {
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    details[open] { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+
+    summary {
+      padding: 1.2rem 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--primary-color);
+      transition: transform 0.25s;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+
+    .faq-answer {
+      padding: 0 1.5rem 1.2rem;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <nav>
+    <a href="index.html" class="logo">TapSOS</a>
+    <div class="lang-selector">
+      <select id="lang-selector">
+        <option value="en">🇬🇧 English</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="pt">🇵🇹 Português</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="zh">🇨🇳 中文</option>
+        <option value="ja">🇯🇵 日本語</option>
+        <option value="ar">🇸🇦 العربية</option>
+      </select>
+    </div>
+  </nav>
+
+  <main class="container" style="align-items: flex-start; justify-content: flex-start;">
+    <div class="glass-card text-page" style="max-width: 800px; margin: 0 auto; width: 100%;">
+
+      <div class="contact-card">
+        <h1 data-i18n="supportTitle">Support &amp; FAQ</h1>
+        <p data-i18n="supportDesc">Need help? Find answers below or send us a message.</p>
+        <a href="mailto:neowavecode@gmail.com" class="contact-btn" data-i18n="supportBtn">Send Email</a>
+      </div>
+
+      <div class="faq-section">
+        <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+
+        <details>
+          <summary data-i18n="faq1q">Does TapSOS need an internet connection?</summary>
+          <div class="faq-answer" data-i18n="faq1a">Only for sending the WhatsApp location message. The SOS siren, vibration, and emergency phone call work completely offline.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq2q">Is my personal data stored on a server?</summary>
+          <div class="faq-answer" data-i18n="faq2a">No. TapSOS stores everything locally on your device. We have no servers holding your data.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq3q">How do I set up emergency contacts for WhatsApp?</summary>
+          <div class="faq-answer" data-i18n="faq3a">Go to Settings › WhatsApp Contacts › Add from contacts. Important: the number must include the international country code.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq4q">The WhatsApp button is not working. What should I do?</summary>
+          <div class="faq-answer" data-i18n="faq4a">Check the following: 1) WhatsApp is installed. 2) You have added at least one contact in Settings. 3) Location (GPS) is enabled. 4) The contact's number includes the country code.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq5q">How do I change the alarm sound?</summary>
+          <div class="faq-answer" data-i18n="faq5a">Go to Settings › Alarm Sound. Tap the play button to preview any sound, then select it and press Save.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq6q">How does 'Shake to Activate' work?</summary>
+          <div class="faq-answer" data-i18n="faq6a">Shaking your phone quickly 2–3 times triggers the SOS alarm — useful when your hands are occupied. You can turn this on or off in Settings.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq7q">The app says 'Location Permission Denied'. How do I fix it?</summary>
+          <div class="faq-answer" data-i18n="faq7a">Go to your phone's Settings › Apps › TapSOS › Permissions › Location › Allow. Also enable GPS from your phone's quick settings panel.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq8q">How do I set the emergency call number?</summary>
+          <div class="faq-answer" data-i18n="faq8a">Go to Settings › Emergency Number and enter the number for your country (e.g. 112 in Europe, 911 in USA/Mexico, 999 in UK, 000 in Australia). The app tries to detect your country automatically.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq9q">How do I add the TapSOS widget to my home screen?</summary>
+          <div class="faq-answer" data-i18n="faq9a">On Android: long-press an empty area of your home screen › Widgets › TapSOS. On iOS: this feature is in progress.</div>
+        </details>
+
+        <details>
+          <summary data-i18n="faq10q">Is TapSOS free? Are there subscriptions?</summary>
+          <div class="faq-answer" data-i18n="faq10a">TapSOS is completely free. Supported by unobtrusive banner ads. No subscriptions, no in-app purchases, no hidden costs.</div>
+        </details>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+      <a href="terms.html" data-i18n="footerTerms">Terms &amp; Conditions</a>
+      <a href="support.html" data-i18n="footerSupport">Support &amp; FAQ</a>
+    </div>
+    <p class="support-email" data-i18n="footerRights">© 2026 TapSOS. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
