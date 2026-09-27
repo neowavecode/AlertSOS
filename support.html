@@ -1,171 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support & FAQ - AlertSOS</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .contact-card { text-align: center; margin-bottom: 3rem; }
-    .contact-btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 1rem 2rem; background: var(--primary-color); color: white;
-      border-radius: 12px; font-size: 1.1rem; font-weight: 600;
-      text-decoration: none; margin-top: 1.5rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255,59,48,0.4); }
-
-    .faq-section { text-align: left; width: 100%; }
-    .faq-section h2 { text-align: center; margin-bottom: 1.5rem; font-size: 1.6rem; }
-
-    details {
-      background: rgba(255,255,255,0.65);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid var(--glass-border);
-      border-radius: 14px;
-      margin-bottom: 0.75rem;
-      overflow: hidden;
-      transition: box-shadow 0.2s;
-    }
-    details[open] { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-
-    summary {
-      padding: 1.2rem 1.5rem;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary::after {
-      content: '+';
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: var(--primary-color);
-      transition: transform 0.25s;
-      flex-shrink: 0;
-      margin-left: 1rem;
-    }
-    details[open] summary::after { transform: rotate(45deg); }
-
-    .faq-answer {
-      padding: 0 1.5rem 1.2rem;
-      font-size: 1rem;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      border-top: 1px solid rgba(0,0,0,0.05);
-      padding-top: 1rem;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support &amp; FAQ — AlertSOS</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath fill='%23FF3B30' d='M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm380-280Z'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="bg-blobs">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
-
-  <nav>
-    <a href="index.html" class="logo">AlertSOS</a>
-    <div class="lang-selector">
-      <select id="lang-selector">
-        <option value="en">🇬🇧 English</option>
-        <option value="es">🇪🇸 Español</option>
-        <option value="fr">🇫🇷 Français</option>
-        <option value="de">🇩🇪 Deutsch</option>
-        <option value="it">🇮🇹 Italiano</option>
-        <option value="pt">🇵🇹 Português</option>
-        <option value="ru">🇷🇺 Русский</option>
-        <option value="zh">🇨🇳 中文</option>
-        <option value="ja">🇯🇵 日本語</option>
-        <option value="ar">🇸🇦 العربية</option>
-      </select>
-    </div>
+<header class="site"><div class="wrap nav">
+  <a class="logo" href="index.html">
+    <svg viewBox="0 -960 960 960" fill="#FF3B30" aria-hidden="true"><path d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm380-280Z"/></svg>
+    <b>AlertSOS</b>
+  </a>
+  <nav class="links">
+    <a href="index.html#features" data-i18n="navFeatures">Features</a>
+    <a href="index.html#how" data-i18n="navHow">How it works</a>
+    <a href="privacy.html" data-i18n="footerPrivacy">Privacy</a>
   </nav>
+  <div class="langbox">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z"/></svg>
+    <select id="lang-selector" aria-label="Language">
+      <option value="en">🇬🇧 English</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="zh">🇨🇳 中文</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="ar">🇸🇦 العربية</option>
+    </select>
+  </div>
+</div></header>
 
-  <main class="container" style="align-items: flex-start; justify-content: flex-start;">
-    <div class="glass-card text-page" style="max-width: 800px; margin: 0 auto; width: 100%;">
-
-      <div class="contact-card">
-        <h1 data-i18n="supportTitle">Support &amp; FAQ</h1>
-        <p data-i18n="supportDesc">Need help? Find answers below or send us a message.</p>
-        <a href="mailto:neowavecode@gmail.com" class="contact-btn" data-i18n="supportBtn">Send Email</a>
-      </div>
-
-      <div class="faq-section">
-        <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
-
-        <details>
-          <summary data-i18n="faq1q">Does AlertSOS need an internet connection?</summary>
-          <div class="faq-answer" data-i18n="faq1a">Only for sending the WhatsApp location message. The SOS siren, vibration, and emergency phone call work completely offline.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq2q">Is my personal data stored on a server?</summary>
-          <div class="faq-answer" data-i18n="faq2a">No. AlertSOS stores everything locally on your device. We have no servers holding your data.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq3q">How do I set up emergency contacts for WhatsApp?</summary>
-          <div class="faq-answer" data-i18n="faq3a">Go to Settings › WhatsApp Contacts › Add from contacts. Important: the number must include the international country code.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq4q">The WhatsApp button is not working. What should I do?</summary>
-          <div class="faq-answer" data-i18n="faq4a">Check the following: 1) WhatsApp is installed. 2) You have added at least one contact in Settings. 3) Location (GPS) is enabled. 4) The contact's number includes the country code.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq5q">How do I change the alarm sound?</summary>
-          <div class="faq-answer" data-i18n="faq5a">Go to Settings › Alarm Sound. Tap the play button to preview any sound, then select it and press Save.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq6q">How does 'Shake to Activate' work?</summary>
-          <div class="faq-answer" data-i18n="faq6a">Shaking your phone quickly 2–3 times triggers the SOS alarm — useful when your hands are occupied. You can turn this on or off in Settings.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq7q">The app says 'Location Permission Denied'. How do I fix it?</summary>
-          <div class="faq-answer" data-i18n="faq7a">Go to your phone's Settings › Apps › AlertSOS › Permissions › Location › Allow. Also enable GPS from your phone's quick settings panel.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq8q">How do I set the emergency call number?</summary>
-          <div class="faq-answer" data-i18n="faq8a">Go to Settings › Emergency Number and enter the number for your country (e.g. 112 in Europe, 911 in USA/Mexico, 999 in UK, 000 in Australia). The app tries to detect your country automatically.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq9q">How do I add the AlertSOS widget to my home screen?</summary>
-          <div class="faq-answer" data-i18n="faq9a">On Android: long-press an empty area of your home screen › Widgets › AlertSOS. On iOS: this feature is in progress.</div>
-        </details>
-
-        <details>
-          <summary data-i18n="faq10q">Is AlertSOS free? Are there subscriptions?</summary>
-          <div class="faq-answer" data-i18n="faq10a">AlertSOS is completely free. Supported by unobtrusive banner ads. No subscriptions, no in-app purchases, no hidden costs.</div>
-        </details>
-
-      </div>
+<main><div class="wrap">
+  <section style="padding-top:48px">
+    <div class="contact-card">
+      <h2 data-i18n="supportTitle">Support &amp; FAQ</h2>
+      <p data-i18n="supportDesc">Need help? Find answers below or send us a message.</p>
+      <a href="mailto:neowavecode@gmail.com" class="mail" data-i18n="supportBtn">Send Email</a>
     </div>
-  </main>
 
-  <footer>
-    <div class="footer-links">
+    <div class="section-h"><h2 data-i18n="faqTitle">Frequently Asked Questions</h2></div>
+
+    <div class="faq">
+      <details>
+        <summary data-i18n="faq1q">Does AlertSOS need an internet connection?</summary>
+        <p data-i18n="faq1a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq2q">Is my personal data stored on a server?</summary>
+        <p data-i18n="faq2a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq3q">How do I set up emergency contacts for WhatsApp?</summary>
+        <p data-i18n="faq3a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq4q">The WhatsApp button is not working. What should I do?</summary>
+        <p data-i18n="faq4a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq5q">How do I change the alarm sound?</summary>
+        <p data-i18n="faq5a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq6q">How does 'Shake to Activate' work?</summary>
+        <p data-i18n="faq6a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq7q">The app says 'Location Permission Denied'. How do I fix it?</summary>
+        <p data-i18n="faq7a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq8q">How do I set the emergency call number?</summary>
+        <p data-i18n="faq8a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq9q">How do I add the AlertSOS widget to my home screen?</summary>
+        <p data-i18n="faq9a"></p>
+      </details>
+      <details>
+        <summary data-i18n="faq10q">Is AlertSOS free? Are there subscriptions?</summary>
+        <p data-i18n="faq10a"></p>
+      </details>
+    </div>
+  </section>
+</div></main>
+
+<footer class="site"><div class="wrap">
+  <div class="foot">
+    <div>
+      <div class="brand"><svg viewBox="0 -960 960 960" fill="#FF3B30" aria-hidden="true"><path d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm380-280Z"/></svg><span>AlertSOS</span></div>
+      <p style="color:var(--muted);max-width:34ch;margin:12px 0 0" data-i18n="footerTagline">Emergency help, one tap away.</p>
+    </div>
+    <div class="links">
       <a href="privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
       <a href="terms.html" data-i18n="footerTerms">Terms &amp; Conditions</a>
-      <a href="support.html" data-i18n="footerSupport">Support &amp; FAQ</a>
+      <a href="support.html" data-i18n="footerSupport">Support</a>
     </div>
-    <p class="support-email" data-i18n="footerRights">© 2026 AlertSOS. All rights reserved.</p>
-  </footer>
+  </div>
+  <div class="foot-bottom">
+    <span>© <span data-year>2026</span> AlertSOS · <span data-i18n="footerRightsShort">All rights reserved.</span></span>
+  </div>
+</div></footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
